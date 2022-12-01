@@ -19,7 +19,7 @@
 
 ### Creating an instance of PrintClient
 
-Creates a new print client object with which you can manipulate and work with different Stations, Printers and Jobs instances.
+Creates a new print client instance with which you can manipulate and work with different Stations, Printers and Jobs instances.
 
 **Parameters**
 
@@ -30,7 +30,7 @@ Creates a new print client object with which you can manipulate and work with di
     *   type: string
     *   required: true
 *   baseUrl
-    *   type: \`${'http' | 'https'}://${string}/api/connect-application/v1/\`
+    *   type: \`${'http' | 'https'}://${host}/api/connect-application/v1/\`
     *   default: ‘https://print.bizswoop.app/api/connect-application/v1/’
     *   required: false
 
@@ -43,11 +43,11 @@ const client = new PrintClient({
 
 **Returns**
 
-The newly created _PrintClient_ object, if the call succeeds.
+The newly created _PrintClient_ instance, if the call succeeds.
 
 **Possible errors**
 
-*   UnauthorizedError - can be throws in case of a wrong publickKey or secretKey.
+*   UnauthorizedError - can be thrown in case of wrong publickKey and/or secretKey.
 
 ---
 
@@ -60,8 +60,8 @@ The newly created _PrintClient_ object, if the call succeeds.
 *   status - ‘pending’ | ‘processing’ | ‘done’ | ‘failed’ | ‘connecting-to-printer’ | ‘archived’
 *   url - string
 *   printerId - number
-*   createdAt - string
-*   updatedAt - string
+*   createdAt - date
+*   updatedAt - date
 
 ---
 
